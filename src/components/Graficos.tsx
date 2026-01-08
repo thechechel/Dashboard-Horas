@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   BarChart,
   Bar,
@@ -115,7 +114,7 @@ export default function Graficos({ dados }: GraficosProps) {
                 fill="#8884d8"
                 dataKey="value"
               >
-                {dadosGraficoPizza.map((entry, index) => (
+                {dadosGraficoPizza.map((_, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={CORES[index % CORES.length]}

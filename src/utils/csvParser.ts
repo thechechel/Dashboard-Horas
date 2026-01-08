@@ -36,9 +36,9 @@ export async function parseCSV(file: File): Promise<RegistroHoras[]> {
                 return null;
               }
             })
-            .filter((r: RegistroHoras | null): r is RegistroHoras => 
-              r !== null && r.responsavel && r.tipoTarefa
-            );
+            .filter((r: RegistroHoras | null): r is RegistroHoras => {
+              return r !== null && Boolean(r.responsavel) && Boolean(r.tipoTarefa);
+            });
 
           resolve(registros);
         } catch (error) {

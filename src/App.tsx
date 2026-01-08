@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { RegistroHoras, Filtros } from './types';
 import { parseCSV } from './utils/csvParser';
 import { filtrarDados, obterTiposTarefaUnicos, obterResponsaveisUnicos } from './utils/dataProcessor';
